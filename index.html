@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Carnegie Mellon University</title>
+<meta name="description" content="A short escort to the Carnegie Mellon University website.">
+<meta name="theme-color" content="#182C4B">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23C41230'/%3E%3Ctext x='16' y='21' font-family='Source Serif 4,Times New Roman,Times,serif' font-size='13' font-weight='600' fill='white' text-anchor='middle'%3ECMU%3C/text%3E%3C/svg%3E">
+<noscript><meta http-equiv="refresh" content="3;url=https://www.cmu.edu/"></noscript>
+<style>
+/* CMU brand palette (brand.cmu.edu): core = Carnegie Red, Iron Gray, Steel Gray, Black, White;
+   tartan accents = Gold Thread, Green Thread; full-color tartan gradates to Weaver Blue */
+:root{--red:#C41230;--navy:#182C4B;--gold:#FDB515;--green:#009647;--iron:#6D6E71;--steel:#E0E0E0;--black:#000;
+  --serif:"Source Serif 4","Source Serif Pro",Times,"Times New Roman",serif;
+  --sans:"Open Sans",Helvetica,Arial,sans-serif}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{display:grid;place-items:center;overflow:hidden;color:#fff;font-family:var(--sans);
+  background:
+   radial-gradient(ellipse at 50% 42%,rgba(24,44,75,0) 0,rgba(14,26,46,.8) 85%),
+   repeating-linear-gradient(90deg,transparent 0 40px,rgba(196,18,48,.62) 40px 54px,transparent 54px 66px,rgba(253,181,21,.55) 66px 67px,transparent 67px 79px,rgba(0,94,48,.55) 79px 83px,transparent 83px 120px),
+   repeating-linear-gradient(0deg,transparent 0 40px,rgba(196,18,48,.62) 40px 54px,transparent 54px 66px,rgba(253,181,21,.55) 66px 67px,transparent 67px 79px,rgba(0,94,48,.55) 79px 83px,transparent 83px 120px),
+   var(--navy)}
+/* University logo: red square with the white three-line stacked wordmark, set lower-left */
+.wordmark{position:fixed;top:max(16px,env(safe-area-inset-top));left:16px;width:108px;aspect-ratio:1;line-height:0}
+.wordmark svg{display:block;width:100%;height:100%}
+.wordmark text{font-family:var(--serif);font-weight:600;fill:#fff;letter-spacing:0}
+.wrap{display:flex;flex-direction:column;align-items:center;text-align:center;padding:24px;max-width:480px;
+  transition:transform .45s cubic-bezier(.5,0,.8,.4),opacity .45s}
+.wrap.out{transform:scale(1.12);opacity:0}
+.stage{position:relative;width:min(80vw,340px);aspect-ratio:1}
+.ring{position:absolute;inset:0;width:100%;height:100%;animation:spin 16s linear infinite}
+.ring text{font:italic 400 26px var(--serif);fill:var(--gold)}
+.disc{position:absolute;inset:17%;border-radius:50%;background:radial-gradient(circle at 50% 35%,#fff,#F4F4F4 62%,var(--steel));
+  box-shadow:0 0 0 4px var(--red),0 18px 40px rgba(0,0,0,.45)}
+.mascot{position:absolute;left:50%;bottom:-3%;width:72%;height:86%;transform:translateX(-50%);animation:pop .7s cubic-bezier(.2,1.5,.4,1) both}
+.pose{position:absolute;bottom:0;left:50%;height:100%;width:auto;transform:translateX(-50%);opacity:0;transition:opacity .25s;
+  filter:drop-shadow(0 10px 12px rgba(0,0,0,.35))}
+.pose.on{opacity:1}
+h1{margin:26px 0 6px;font-family:var(--serif);font-size:clamp(22px,6.2vw,30px);line-height:1.15;font-weight:700}
+.motto{margin:0;font-family:var(--serif);font-style:italic;color:var(--steel);font-size:17px}
+.motto small{display:block;margin-top:2px;font-family:var(--sans);font-style:normal;font-size:13px;color:rgba(224,224,224,.78);letter-spacing:.02em}
+.bar{width:min(70vw,260px);height:4px;margin:24px 0 18px;background:rgba(224,224,224,.22);overflow:hidden}
+.bar i{display:block;height:100%;width:100%;transform-origin:left;transform:scaleX(0);background:linear-gradient(90deg,var(--gold),var(--red));animation:fill linear forwards}
+.actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.btn{font:600 16px var(--sans);padding:11px 20px;border:2px solid var(--red);background:var(--red);color:#fff;text-decoration:none;cursor:pointer}
+.btn:hover{background:#941120;border-color:#941120}
+.btn.ghost{background:transparent;border-color:rgba(255,255,255,.7)}
+.btn.ghost:hover{background:#fff;border-color:#fff;color:var(--red)}
+.btn:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes pop{from{transform:translateX(-50%) translateY(40px) scale(.6);opacity:0}}
+@keyframes fill{to{transform:scaleX(1)}}
+@media (prefers-reduced-motion:reduce){.ring,.mascot{animation:none}.wrap{transition:none}}
+</style>
+</head>
+<body>
+<div class="wordmark" aria-hidden="true"><svg viewBox="0 0 100 100" focusable="false"><rect width="100" height="100" fill="#C41230"/><text x="9" y="62" font-size="14.6" textLength="56" lengthAdjust="spacingAndGlyphs">Carnegie</text><text x="9" y="76.2" font-size="14.6" textLength="43" lengthAdjust="spacingAndGlyphs">Mellon</text><text x="9" y="90.4" font-size="14.6" textLength="63.5" lengthAdjust="spacingAndGlyphs">University</text></svg></div>
+<main class="wrap" id="wrap">
+  <div class="stage">
+    <svg class="ring" viewBox="0 0 400 400" aria-hidden="true">
+      <path id="c" d="M200,200 m-168,0 a168,168 0 1,1 336,0 a168,168 0 1,1 -336,0" fill="none"/>
+      <text><textPath href="#c" textLength="1048" lengthAdjust="spacing">My heart is in the work – My heart is in the work – My heart is in the work – </textPath></text>
+    </svg>
+    <div class="disc"></div>
+    <div class="mascot" id="mascot" role="img" aria-label="A maroon mascot with the Carnegie Mellon University seal on its belly"></div>
+  </div>
+  <h1>Escorting you to Carnegie Mellon</h1>
+  <p class="motto">“My heart is in the work.”<small>Andrew Carnegie</small></p>
+  <div class="bar" aria-hidden="true"><i id="fill"></i></div>
+  <div class="actions">
+    <a class="btn" id="go" href="https://www.cmu.edu/">Go to cmu.edu</a>
+    <button class="btn ghost" id="stay" type="button">Stay here</button>
+  </div>
+</main>
+<!-- Pose list lives in assets/images.js; add a filename there to add a pose -->
+<script src="assets/images.js"></script>
+<script>
+(function(){
+  var DIR="assets/", list=window.MASCOT_IMAGES||[], box=document.getElementById("mascot");
+  for(var n=0;n<list.length;n++){
+    var im=document.createElement("img");
+    im.className="pose"+(n===0?" on":""); im.alt=""; im.decoding="async";
+    im.src=DIR+encodeURIComponent(list[n]);
+    box.appendChild(im);
+  }
+})();
+</script>
+<script>
+/* Carnegie tartan, rebuilt from a threadcount: a Glengarry-style sett (blue / green / black ground
+   with red overchecks) where the Glengarry white line is yellow, woven as a 2/2 twill and coloured
+   with CMU tartan-palette threads. The CSS gradients remain as a fallback if canvas is unavailable. */
+(function(){
+  var C={R:[196,18,48],Y:[253,181,21],G:[0,94,48],B:[4,54,115],K:[0,0,0]};
+  // Half-sett, symmetric with pivots at both ends: R/8 G2 R2 G16 K12 B16 K2 R3 K2 B16 K12 G16 Y/2
+  var half=[["R",8],["G",2],["R",2],["G",16],["K",12],["B",16],["K",2],["R",3],["K",2],["B",16],["K",12],["G",16],["Y",2]];
+  var seq=[], j, k;
+  function push(c,n){ for(k=0;k<n;k++) seq.push(c); }
+  for(j=0;j<half.length;j++) push(half[j][0],half[j][1]);
+  for(j=half.length-2;j>0;j--) push(half[j][0],half[j][1]);   // mirror, pivots appear once
+  var N=seq.length;                                           // 208 threads, divisible by 4 so the twill tiles cleanly
+  var T=2, dpr=Math.min(2,window.devicePixelRatio||1), px=Math.max(1,Math.round(T*dpr));
+  var cv=document.createElement("canvas"), ctx=cv.getContext&&cv.getContext("2d");
+  if(!ctx) return;
+  cv.width=cv.height=N*px;
+  var img=ctx.createImageData(cv.width,cv.height), d=img.data, W=cv.width;
+  for(var y=0;y<W;y++){
+    var ty=(y/px)|0;
+    for(var x=0;x<W;x++){
+      var tx=(x/px)|0, warp=((tx+ty)&3)<2;                  // 2-over-2 twill diagonal
+      var c=C[warp?seq[tx]:seq[ty]], s=warp?1:.82;            // weft slightly shaded for a woven look
+      var edge=(x%px===0||y%px===0)?.9:1;                     // faint thread separation
+      var o=(y*W+x)*4;
+      d[o]=c[0]*s*edge; d[o+1]=c[1]*s*edge; d[o+2]=c[2]*s*edge; d[o+3]=255;
+    }
+  }
+  ctx.putImageData(img,0,0);
+  var S=N*T, b=document.body.style;
+  // Full-colour tartan gradates into Weaver Blue (#182C4B), keeping the centre calm behind the text
+  b.backgroundImage="radial-gradient(ellipse at 50% 42%,rgba(24,44,75,.45) 0,rgba(24,44,75,.7) 45%,rgba(24,44,75,.95) 85%),url("+cv.toDataURL("image/png")+")";
+  b.backgroundSize="auto,"+S+"px "+S+"px";
+  b.backgroundPosition="center";
+})();
+</script>
+<script>
+(function(){
+  var TARGET="https://www.cmu.edu/", DELAY=5000, EXIT=450;
+  var stayMode=/[?&]stay\b/.test(location.search);
+  var reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var wrap=document.getElementById("wrap"), fill=document.getElementById("fill");
+  var stayBtn=document.getElementById("stay"), go=document.getElementById("go");
+  var remaining=reduce?1200:DELAY, started=0, timer=0, paused=false, leaving=false;
+  fill.style.animationDuration=(remaining+(reduce?0:EXIT))+"ms";
+  function leave(){
+    if(leaving)return; leaving=true; clearTimeout(timer);
+    if(!reduce)wrap.classList.add("out");
+    setTimeout(function(){ if(!stayMode)location.replace(TARGET); },reduce?0:EXIT);
+  }
+  function arm(){ started=performance.now(); timer=setTimeout(leave,remaining); }
+  go.addEventListener("click",function(e){ e.preventDefault(); leave(); });
+  stayBtn.addEventListener("click",function(){
+    if(!paused){ clearTimeout(timer); remaining-=performance.now()-started; paused=true;
+      fill.style.animationPlayState="paused"; stayBtn.textContent="Resume"; }
+    else { paused=false; fill.style.animationPlayState="running"; stayBtn.textContent="Stay here"; arm(); }
+  });
+  var poses=[].slice.call(document.querySelectorAll(".pose")), i=0;
+  if(!reduce&&poses.length>1)setInterval(function(){ if(paused)return; poses[i].classList.remove("on"); i=(i+1)%poses.length; poses[i].classList.add("on"); },1700);
+  arm();
+})();
+</script>
+</body>
+</html>
