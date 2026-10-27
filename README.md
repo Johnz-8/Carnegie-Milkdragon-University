@@ -23,7 +23,7 @@ If you believe any material should be credited, corrected, or removed, please op
 
 ### 免责声明
 
-**卡内基奶龙大学（Carnegie Milkdragon University）**是一个由爱好者制作的非官方戏仿项目，仅用于娱乐与创意实验。本项目并非真实大学，与卡内基梅隆大学（Carnegie Mellon University，CMU）以及奶龙的创作者或权利人均无隶属关系，也未获得其认可或赞助。
+**卡内基奶龙大学（Carnegie Milkdragon University）** 是一个由爱好者制作的非官方戏仿项目，仅用于娱乐与创意实验。本项目并非真实大学，与卡内基梅隆大学（Carnegie Mellon University，CMU）以及奶龙的创作者或权利人均无隶属关系，也未获得其认可或赞助。
 
 本项目涉及的所有第三方名称、标志、大学标识、角色及美术作品，其权利均归各自权利人所有。使用这些内容不代表获得相关方的认可，也不构成任何权利转让。除另有说明外，本仓库的许可证仅适用于贡献者有权授权的原创内容，不授予任何第三方素材的使用权。
 
