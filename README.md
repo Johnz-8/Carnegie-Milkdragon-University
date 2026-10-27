@@ -1,4 +1,4 @@
-# Carnegie-Milkdragon-University
+# Carnegie Milkdragon University
 # 卡内基奶龙大学
 
 [English](#english) | [简体中文](#简体中文)
